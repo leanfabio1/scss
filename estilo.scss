@@ -88,7 +88,7 @@ text-align: center;
 color: rgb(210, 168, 130);;
 background-color: rgb(255, 240, 213);
 text-transform: uppercase;
-font-size: 6rem;
+font-size: 3rem;
 font-family: sans-serif;
 }
 .sec{
@@ -255,4 +255,17 @@ body {
   font-size: 14px;
   font-style: italic;
   margin-top: 4px;
+}
+
+@mixin titulos-principales{
+  font-family: Americana;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  position: relative;
+
+} 
+
+h1{
+  @include titulos-principales()
 }

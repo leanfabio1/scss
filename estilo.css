@@ -6,7 +6,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -29,13 +30,15 @@ html {
 
 /* regla para usar una font descargada a la pc */
 @font-face {
-  font-family: "montserrat";
+  font-family: 'montserrat';
   src: url("../assets/font/Montserrat-BlackItalic.ttf");
 }
+
 @font-face {
-  font-family: "Amstagram";
+  font-family: 'Amstagram';
   src: url("../assets/font/Amstagram.ttf");
 }
+
 a {
   text-decoration: none;
   color: #fff0d5;
@@ -75,15 +78,23 @@ li {
   width: 15%;
   position: relative;
   font-size: 2rem;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 ul ul {
   position: relative;
   display: none;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 h2 {
@@ -91,7 +102,7 @@ h2 {
   color: #d2a882;
   background-color: #fff0d5;
   text-transform: uppercase;
-  font-size: 6rem;
+  font-size: 3rem;
   font-family: sans-serif;
 }
 
@@ -109,8 +120,10 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
-  box-shadow: 7px 13px 37 rgba(0, 0, 0, 0.8);
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  -webkit-box-shadow: 7px 13px 37 rgba(0, 0, 0, 0.8);
+          box-shadow: 7px 13px 37 rgba(0, 0, 0, 0.8);
 }
 
 header {
@@ -128,7 +141,7 @@ header span {
 }
 
 .contact {
-  padding: 0.8rem;
+  padding: .8rem;
   overflow: hidden;
   color: gray;
 }
@@ -143,7 +156,7 @@ header span {
   font-weight: 700;
 }
 
-.contact input:not([type=submit]), .contact textarea {
+.contact input:not([type='submit']), .contact textarea {
   border: none;
   border-bottom: 2px solid #ff165d;
   margin-bottom: 10px;
@@ -156,7 +169,7 @@ header span {
   min-height: 100px;
 }
 
-input[type=submit] {
+input[type='submit'] {
   padding: 10px;
   border: none;
   background-color: #ff165d;
@@ -171,20 +184,34 @@ input[type=submit] {
 }
 
 body {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Merriweather", serif;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100vh;
   margin: 0;
 }
 
 .person {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 280px;
 }
 
@@ -192,8 +219,12 @@ body {
   border-radius: 50%;
   height: 312px;
   -webkit-tap-highlight-color: transparent;
-  transform: scale(0.48);
+  -webkit-transform: scale(0.48);
+          transform: scale(0.48);
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 400px;
 }
 
@@ -207,13 +238,16 @@ body {
 }
 
 .container:hover {
-  transform: scale(0.54);
+  -webkit-transform: scale(0.54);
+          transform: scale(0.54);
 }
 
 .container-inner {
-  clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
+  -webkit-clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
+          clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
   position: relative;
-  transform-origin: 50%;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
   top: -200px;
 }
 
@@ -232,13 +266,19 @@ body {
 .img {
   pointer-events: none;
   position: relative;
-  transform: translateY(20px) scale(1.15);
-  transform-origin: 50% bottom;
+  -webkit-transform: translateY(20px) scale(1.15);
+          transform: translateY(20px) scale(1.15);
+  -webkit-transform-origin: 50% bottom;
+          transform-origin: 50% bottom;
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .container:hover .img {
-  transform: translateY(0) scale(1.2);
+  -webkit-transform: translateY(0) scale(1.2);
+          transform: translateY(0) scale(1.2);
 }
 
 .img1 {
@@ -281,4 +321,11 @@ body {
   margin-top: 4px;
 }
 
+h1 {
+  font-family: Americana;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: #6e6e6e;
+  position: relative;
+}
 /*# sourceMappingURL=estilo.css.map */
